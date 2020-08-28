@@ -13,8 +13,7 @@ import "../ComponentsCss/Menu.css";
 import { Link } from "react-router-dom";
 import image from "../assets/images/app_icon_without_bg.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { grayColor, whiteColor } from "../assets/jss/material-dashboard-react";
-import { teal } from "@material-ui/core/colors";
+import { whiteColor } from "../assets/jss/material-dashboard-react";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
@@ -31,16 +30,6 @@ const styles = {
     paddingRight: "20px",
     paddingLeft: "20px",
   },
-  // focus: {
-  //     borderRadius: "50px",
-  //     color: whiteColor,
-  //     padding:'0 0 0 8px',
-  //
-  //     '&:focus': {
-  //         backgroundColor:'#f3f3f3',
-  //         color:'#008081',
-  //     }
-  //     },
 
   focus: {
     borderRadius: "50px",
@@ -96,11 +85,6 @@ function Menu(props) {
     "Content-Type": "application/json",
     "x-access-token": userData.accessToken,
   };
-
-  // const handleFocus = () => {
-  //   if (buttonColor === true) setButtonColor(false);
-  //   else if (buttonColor === false) setButtonColor(true);
-  // };
 
   const handleDrawerToggle = () => {
     setShowDrawerMenu(!showDrawerMenu);
@@ -181,22 +165,7 @@ function Menu(props) {
           </MenuItem>
         </Link>
       )}
-      {/* {props.role === "SUPERVISOR" && (
-        <Link to={"/dashboard/employees"}>
-          <MenuItem
-            className={
-              buttonActive === "employees" ? classes.focusNew : classes.focus
-            }
-            onClick={() => setButtonActive("employees")}
-          >
-            <SupervisorAccountRoundedIcon
-              className={classes.menuNames}
-              fontSize="small"
-            />
-            <p>Employees</p>
-          </MenuItem>
-        </Link>
-      )} */}
+
       <Link to={"/dashboard/reports"}>
         <MenuItem
           className={
@@ -240,22 +209,6 @@ function Menu(props) {
   );
 
   return (
-    //new menu layout
-    // <div className="menu-grid">
-    //     <div className="logo">
-    //         <img alt='' className="logo-image" src={image}/>
-    //         <p className="logo-title">Complaint Management System</p>
-    //     </div>
-    //
-    //     <div className="menu-list">
-    //         <p>Home</p>
-    //         <p>Home</p>
-    //         <p>Home</p>
-    //         <p>Home</p>
-    //         <p>Home</p>
-    //
-    //     </div>
-    // </div>
 
     //old menu layout
 
